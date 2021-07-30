@@ -28,6 +28,6 @@ app.get('/getFoodItems', async (req, res) => {
   res.send(foodItems);
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Server started at http://localhost:${port}`);
 });
