@@ -2,7 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const port = 5000;
-
+const cors = require('cors');
+app.use(cors());
 mongoose
   .connect(
     'mongodb+srv://manas:manas123@cluster0.p01ap.mongodb.net/FoodDB?retryWrites=true&w=majority',
